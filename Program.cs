@@ -1,4 +1,5 @@
 ﻿using System;
+using AlBehdTranslator; 
 
 namespace AlBehdTranslator
 {
@@ -16,7 +17,7 @@ namespace AlBehdTranslator
                     break;
                 }
 
-                string output = AlBehdTranslator.ToAlBehd(input);
+                string output = AlBehd.ToAlBehd(input);
 
                 Console.WriteLine(output); 
             }
