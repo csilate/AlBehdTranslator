@@ -34,6 +34,7 @@ namespace AlBehdTranslator
             { 'X', "Q" },
             { 'Y', "O" },
             { 'Z', "W" },
+            { ' ', " " }
         };
         public static string ToAlBehd(string input)
         {
