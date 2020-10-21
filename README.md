@@ -9,7 +9,7 @@
 - [x] 3+ items from feature list
     - [x] master loop
     - [x] created dictionary populated with several values, retireving values, and using them.
-    - [x] build a conversion tool (converts english to al behd)
+    - [x] build a conversion tool (converts english to al behd and grams to ounces)
 
 ## To Do:
 
