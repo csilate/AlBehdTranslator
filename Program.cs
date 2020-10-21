@@ -7,19 +7,48 @@ namespace AlBehdTranslator
     {
         static void Main()
         {
-            while(true)
+            Start:
+            Console.Write("Enter 'ALB' to translate from Al Behd, or 'ENG' to translate from English: ");
+            string choice = Console.ReadLine();
+
+            if(choice.ToUpper() == "ALB")
             {
-                Console.Write("Enter things to be translated. Type 'ESC' to exit.: ");
-                string input = Console.ReadLine();
-
-                if(input.ToUpper() == "ESC")
+                while(true)
                 {
-                    break;
+                    Console.Write("Enter things to be translated to Al Behd. Type 'ESC' to exit.: ");
+                    string input = Console.ReadLine();
+
+                    if(input.ToUpper() == "ESC")
+                    {
+                        break;
+                    }
+
+                    string output = AlBehd.ToAlBehd(input);
+
+                    Console.WriteLine(output); 
                 }
+            }
+            else if(choice.ToUpper() == "ENG")
+            {
+                while(true)
+                {
+                    Console.Write("Enter things to be translated to English. Type 'ESC' to exit.: ");
+                    string input = Console.ReadLine();
 
-                string output = AlBehd.ToAlBehd(input);
+                    if(input.ToUpper() == "ESC")
+                    {
+                        break;
+                    }
 
-                Console.WriteLine(output); 
+                    string output = English.ToEnglish(input);
+
+                    Console.WriteLine(output); 
+                }
+            }
+            else 
+            {
+                Console.WriteLine("Please enter a valid command.");
+                goto Start;
             }
         }
     }
