@@ -8,7 +8,7 @@ namespace AlBehdTranslator
         static void Main()
         {
             Start:
-            Console.Write("Enter 'ALB' to translate from Al Behd, or 'ENG' to translate from English: ");
+            Console.Write("Enter 'ALB' to translate from Al Behd, 'ENG' to translate from English, or 'GRAM' to convert grams to ounces: ");
             string choice = Console.ReadLine();
 
             if(choice.ToUpper() == "ALB")
@@ -30,7 +30,7 @@ namespace AlBehdTranslator
                     {
                         string output = AlBehd.ToAlBehd(input);
 
-                        Console.WriteLine(output); 
+                        Console.WriteLine(output);
                     }
                 }
             }
@@ -57,11 +57,35 @@ namespace AlBehdTranslator
                     }
                 }
             }
+            else if(choice.ToUpper() == "GRAM")
+            {
+                while(true)
+                {
+                    try
+                    {
+                        Console.Write("Enter the number of grams: ");
+                        double input = Convert.ToDouble(Console.ReadLine());
+
+                        double output = ConvertGramsToOunces(input);
+
+                        Console.WriteLine(output); 
+                    }
+                    catch(FormatException)
+                    {
+                        Console.WriteLine("Invalid input. Please enter a number.");
+                    }
+                }
+            }
             else 
             {
                 Console.WriteLine("Please enter a valid command.");
                 goto Start;
             }
+        }
+        static double ConvertGramsToOunces(double grams) 
+        {
+            double ounces = grams * 0.0352739619;
+            return ounces;
         }
     }
 }
