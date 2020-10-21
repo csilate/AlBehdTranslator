@@ -66,7 +66,7 @@ namespace AlBehdTranslator
                         Console.Write("Enter the number of grams: ");
                         double input = Convert.ToDouble(Console.ReadLine());
 
-                        double output = ConvertGramsToOunces(input);
+                        double output = ToOunces(input);
 
                         Console.WriteLine(output); 
                     }
@@ -82,7 +82,7 @@ namespace AlBehdTranslator
                 goto Start;
             }
         }
-        static double ConvertGramsToOunces(double grams) 
+        static double ToOunces(double grams) 
         {
             double ounces = grams * 0.0352739619;
             return ounces;
