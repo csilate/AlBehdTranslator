@@ -15,34 +15,46 @@ namespace AlBehdTranslator
             {
                 while(true)
                 {
-                    Console.Write("Enter things to be translated to Al Behd. Type 'ESC' to exit.: ");
+                    Console.Write("Enter things to be translated to Al Behd. Type 'MAIN' to go back to the main menu. Type 'ESC' to exit.: ");
                     string input = Console.ReadLine();
 
                     if(input.ToUpper() == "ESC")
                     {
                         break;
                     }
+                    else if(input.ToUpper() == "MAIN")
+                    {
+                        goto Start;
+                    }
+                    else
+                    {
+                        string output = AlBehd.ToAlBehd(input);
 
-                    string output = AlBehd.ToAlBehd(input);
-
-                    Console.WriteLine(output); 
+                        Console.WriteLine(output); 
+                    }
                 }
             }
             else if(choice.ToUpper() == "ENG")
             {
                 while(true)
                 {
-                    Console.Write("Enter things to be translated to English. Type 'ESC' to exit.: ");
+                    Console.Write("Enter things to be translated to English. Type 'MAIN' to go back to the main menu. Type 'ESC' to exit.: ");
                     string input = Console.ReadLine();
 
                     if(input.ToUpper() == "ESC")
                     {
                         break;
                     }
+                    else if(input.ToUpper() == "MAIN")
+                    {
+                        goto Start;
+                    }
+                    else
+                    {
+                        string output = English.ToEnglish(input);
 
-                    string output = English.ToEnglish(input);
-
-                    Console.WriteLine(output); 
+                        Console.WriteLine(output); 
+                    }
                 }
             }
             else 

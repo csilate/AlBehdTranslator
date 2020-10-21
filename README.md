@@ -2,7 +2,7 @@
 
 ## Basic Requirements:
 
-- [] uploaded to github with 5 commits
+- [x] uploaded to github with 5 commits
 - [x] includes README
 - [x] create one class
 - [] create and call 3 functions
