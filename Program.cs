@@ -13,7 +13,7 @@ namespace AlBehdTranslator
 
             if(choice.ToUpper() == "ALB")
             {
-                while(true)
+                while(true) //starts loop
                 {
                     Console.Write("Enter things to be translated to Al Behd. Type 'MAIN' to go back to the main menu. Type 'ESC' to exit.: ");
                     string input = Console.ReadLine();
@@ -57,7 +57,7 @@ namespace AlBehdTranslator
                     }
                 }
             }
-            else if(choice.ToUpper() == "GRAM")
+            else if(choice.ToUpper() == "GRAM") //only semi-functional, need to add a way to ESC and MAIN. maybe parse?
             {
                 while(true)
                 {

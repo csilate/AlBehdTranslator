@@ -6,7 +6,7 @@ namespace AlBehdTranslator
 {
     static class English
     {
-        private static Dictionary<char, string> _textToEnglish = new Dictionary<char, string>
+        private static Dictionary<char, string> _textToEnglish = new Dictionary<char, string> //takes al behd chars and makes them eng chars
         {
             { 'Y', "A" },
             { 'P', "B" },
@@ -49,7 +49,7 @@ namespace AlBehdTranslator
                 }
                 catch(KeyNotFoundException)
                 {
-                    output.Add("!");
+                    output.Add("!"); //if no translation for the char exists, adds '!' in its place.
                 }
             }
 
